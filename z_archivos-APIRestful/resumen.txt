@@ -2,3 +2,10 @@ Clase 25
 ***********
 Releer al finalizar el curso:
 CLASE 25 -Sección 6-
+
+************************************************
+Guardar temporalmente:
+************************************************
+C:\APIRestful [master]> php artisan key:generate
+Application key [base64:Cw4PHeMWAd+j66VPJ1vC1EdjBH+cftZ/9YW8g1At9DU=] set successfully.
+****************************************************************************************
