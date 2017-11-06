@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"USUARIO",
+				"USUARIO_VERIFICADO"
+			],
+			[
+				"ve",
+				"verification_token"
+			],
+			[
+				"Route",
+				"Route::middleware('auth:api"
+			],
+			[
 				"get",
 				"getElementById"
 			],
@@ -151,11 +163,27 @@
 	"expanded_folders":
 	[
 		"/C/APIRestful",
-		"/C/APIRestful/database"
+		"/C/APIRestful/app",
+		"/C/APIRestful/routes"
 	],
 	"file_history":
 	[
 		"/C/APIRestful/app/User.php",
+		"/C/APIRestful/app/Category.php",
+		"/C/APIRestful/app/Product.php",
+		"/C/APIRestful/app/Transaction.php",
+		"/C/APIRestful/app/Http/Controllers/Category/CategoryController.php",
+		"/C/APIRestful/app/Http/Controllers/Product/ProductController.php",
+		"/C/APIRestful/routes/api.php",
+		"/C/APIRestful/database/migrations/2017_11_06_103027_create_products_table.php",
+		"/C/APIRestful/database/migrations/2017_11_06_103355_create_transactions_table.php",
+		"/C/APIRestful/database/migrations/2017_11_06_103540_create_categories_table.php",
+		"/C/APIRestful/app/Seller.php",
+		"/C/APIRestful/app/Buyer.php",
+		"/C/APIRestful/app/Providers/RouteServiceProvider.php",
+		"/C/APIRestful/routes/web.php",
+		"/C/APIRestful/.env",
+		"/C/APIRestful/.env.example",
 		"/C/Users/Irene/AppData/Roaming/Sublime Text 3/Packages/User/PHP Companion.sublime-settings",
 		"/C/Users/Irene/AppData/Roaming/Sublime Text 3/Packages/PHP Companion/PHP Companion.sublime-settings",
 		"/C/APIRestful/prueba.txt",
