@@ -15,7 +15,16 @@ class CreateCategoriesTable extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('description',1000);
+            /*
+            $table->integer('product_id')->unsigned(); --->table intermedia relacion n-n
+            */
             $table->timestamps();
+
+            /*
+            $table->foreign('product_id')->references('id')->on('products'); --->table intermedia relacion n-n
+            */
         });
     }
 
