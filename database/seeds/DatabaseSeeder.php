@@ -17,16 +17,17 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
     	DB::statement('SET FOREIGN_KEY_CHECKS = 0');
-    	User::truncate();
-    	Category::truncate();
-    	Product::truncate();
-    	Transaction::truncate();
-    	DB::table('category_product')->truncate();
 
-    	$cantidadUsuarios = 200;
-    	$cantidadCategorias = 30;
-    	$cantidadProductos = 1000;
-    	$cantidadTransacciones = 1000;
+        User::truncate();
+        Category::truncate();
+        Product::truncate();
+        Transaction::truncate();
+        DB::table('category_product')->truncate();
+
+        $cantidadUsuarios = 200;
+        $cantidadCategorias = 30;
+        $cantidadProductos = 1000;
+        $cantidadTransacciones = 1000;
 
 
         factory(User::class, $cantidadUsuarios)->create();
@@ -36,10 +37,10 @@ class DatabaseSeeder extends Seeder
 			function ($producto) {
 				$categorias = Category::all()->random(mt_rand(1, 5))->pluck('id');
 
-    			$producto->categories()->attach($categorias);
-    		}
-    	);
+				$producto->categories()->attach($categorias);
+			}
+		);        
 
-    	factory(Transaction::class, $cantidadTransacciones)->create();
+        factory(Transaction::class, $cantidadTransacciones)->create();
     }
 }

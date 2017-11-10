@@ -12,28 +12,33 @@ class Product extends Model
 	const PRODUCTO_DISPONIBLE = 'disponible';
 	const PRODUCTO_NO_DISPONIBLE = 'no disponible';
 
-    protected $fillable=[
+    protected $fillable = [
     	'name',
     	'description',
     	'quantity',
     	'status',
     	'image',
-    	'seller_id'
+    	'seller_id',
     ];
 
-    public function estaDisponible(){
+    public function estaDisponible()
+    {
     	return $this->status == Product::PRODUCTO_DISPONIBLE;
     }
 
-    public function seller(){
-        return $this -> belongsTo(Seller::class);
+    public function seller()
+    {
+        return $this->belongsTo(Seller::class);
     }
 
-    public function transactions(){
-        return $this -> hasMany(Transaction::class);   
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
     }
 
-    public function categories(){
-        return $this -> belongsToMany(Category::class);
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
     }
 }
