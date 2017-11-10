@@ -164,13 +164,18 @@
 	[
 		"/C/APIRestful",
 		"/C/APIRestful/app",
-		"/C/APIRestful/resources",
+		"/C/APIRestful/app/Http",
+		"/C/APIRestful/app/Http/Controllers",
+		"/C/APIRestful/app/Http/Controllers/User",
 		"/C/APIRestful/routes"
 	],
 	"file_history":
 	[
-		"/C/APIRestful/database/seeds/DatabaseSeeder.php",
+		"/C/APIRestful/routes/api.php",
+		"/C/APIRestful/app/Http/Controllers/User/UserController.php",
 		"/C/APIRestful/app/User.php",
+		"/C/APIRESTful-con-Laravel-Guia-Definitiva/database/factories/ModelFactory.php",
+		"/C/APIRestful/database/seeds/DatabaseSeeder.php",
 		"/C/APIRestful/database/factories/ModelFactory.php",
 		"/C/APIRestful/database/migrations/2017_11_06_103540_create_categories_table.php",
 		"/C/APIRestful/database/migrations/2017_11_07_101851_category_product_table.php",
@@ -181,7 +186,6 @@
 		"/C/APIRestful/app/Product.php",
 		"/C/APIRestful/database/migrations/2014_10_12_000000_create_users_table.php",
 		"/C/APIRestful/app/Http/Controllers/Seller/SellerController.php",
-		"/C/APIRestful/routes/api.php",
 		"/C/APIRestful/app/Providers/AppServiceProvider.php",
 		"/C/APIRestful/app/Transaction.php",
 		"/C/APIRestful/app/Category.php",
@@ -279,7 +283,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 40.0
 	},
 	"find_in_files":
 	{
@@ -294,6 +298,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"all",
+			"many",
+			"has",
 			"getrelationexistencequery(",
 			"getrelationexisten",
 			"all",
