@@ -119,34 +119,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "database/seeds/DatabaseSeeder.php",
-			"settings":
-			{
-				"buffer_size": 1110,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 5994 files for \"getrelationexistencequery(\"\n\nC:\\APIRestful\\storage\\logs\\laravel.log:\n   67  #24 /home/vagrant/apirestful/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))\n   68  #25 {main}  \n   69: [2017-11-07 11:58:41] local.ERROR: Symfony\\Component\\Debug\\Exception\\FatalThrowableError: Call to a member function getRelationExistenceQuery() on null in /home/vagrant/apirestful/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/QueriesRelationships.php:40\n   70  Stack trace:\n   71  #0 /home/vagrant/apirestful/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(1374): Illuminate\\Database\\Eloquent\\Builder->has(NULL)\n\nC:\\APIRestful\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\BelongsTo.php:\n  247       * @return \\Illuminate\\Database\\Eloquent\\Builder\n  248       */\n  249:     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])\n  250      {\n  251          if ($parentQuery->getQuery()->from == $query->getQuery()->from) {\n\nC:\\APIRestful\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany.php:\n  783       * @return \\Illuminate\\Database\\Eloquent\\Builder\n  784       */\n  785:     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])\n  786      {\n  787          if ($parentQuery->getQuery()->from == $query->getQuery()->from) {\n  ...\n  791          $this->performJoin($query);\n  792  \n  793:         return parent::getRelationExistenceQuery($query, $parentQuery, $columns);\n  794      }\n  795  \n  ...\n  812          $this->performJoin($query);\n  813  \n  814:         return parent::getRelationExistenceQuery($query, $parentQuery, $columns);\n  815      }\n  816  \n\nC:\\APIRestful\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\HasManyThrough.php:\n  405       * @return \\Illuminate\\Database\\Eloquent\\Builder\n  406       */\n  407:     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])\n  408      {\n  409          $this->performJoin($query);\n\nC:\\APIRestful\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\HasOneOrMany.php:\n  326       * @return \\Illuminate\\Database\\Eloquent\\Builder\n  327       */\n  328:     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])\n  329      {\n  330          if ($query->getQuery()->from == $parentQuery->getQuery()->from) {\n  ...\n  332          }\n  333  \n  334:         return parent::getRelationExistenceQuery($query, $parentQuery, $columns);\n  335      }\n  336  \n\nC:\\APIRestful\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\MorphOneOrMany.php:\n  210       * @return \\Illuminate\\Database\\Eloquent\\Builder\n  211       */\n  212:     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])\n  213      {\n  214:         return parent::getRelationExistenceQuery($query, $parentQuery, $columns)->where(\n  215              $this->morphType, $this->morphClass\n  216          );\n\nC:\\APIRestful\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\MorphToMany.php:\n  103       * @return \\Illuminate\\Database\\Eloquent\\Builder\n  104       */\n  105:     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])\n  106      {\n  107:         return parent::getRelationExistenceQuery($query, $parentQuery, $columns)->where(\n  108              $this->table.'.'.$this->morphType, $this->morphClass\n  109          );\n\nC:\\APIRestful\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Relations\\Relation.php:\n  176      public function getRelationExistenceCountQuery(Builder $query, Builder $parentQuery)\n  177      {\n  178:         return $this->getRelationExistenceQuery(\n  179              $query, $parentQuery, new Expression('count(*)')\n  180          );\n  ...\n  191       * @return \\Illuminate\\Database\\Eloquent\\Builder\n  192       */\n  193:     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])\n  194      {\n  195          return $query->select($columns)->whereColumn(\n\n14 matches across 8 files\n",
-			"settings":
-			{
-				"buffer_size": 4320,
-				"line_ending": "Windows",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "app/User.php",
-			"settings":
-			{
-				"buffer_size": 1115,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -197,6 +169,7 @@
 	],
 	"file_history":
 	[
+		"/C/APIRestful/database/seeds/DatabaseSeeder.php",
 		"/C/APIRestful/app/User.php",
 		"/C/APIRestful/database/factories/ModelFactory.php",
 		"/C/APIRestful/database/migrations/2017_11_06_103540_create_categories_table.php",
@@ -306,7 +279,7 @@
 	],
 	"find":
 	{
-		"height": 40.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -408,168 +381,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "database/seeds/DatabaseSeeder.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1110,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								679,
-								679
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 45.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4320,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										439,
-										465
-									],
-									[
-										976,
-										1002
-									],
-									[
-										1356,
-										1382
-									],
-									[
-										1619,
-										1645
-									],
-									[
-										1786,
-										1812
-									],
-									[
-										2071,
-										2097
-									],
-									[
-										2412,
-										2438
-									],
-									[
-										2649,
-										2675
-									],
-									[
-										2934,
-										2960
-									],
-									[
-										3059,
-										3085
-									],
-									[
-										3400,
-										3426
-									],
-									[
-										3525,
-										3551
-									],
-									[
-										3916,
-										3942
-									],
-									[
-										4137,
-										4163
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"default_dir": "C:\\APIRestful",
-							"detect_indentation": false,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 945.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/User.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1115,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								429,
-								431
-							]
-						],
-						"settings":
-						{
-							"auto_complete": false,
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

@@ -25,10 +25,10 @@ $factory->define(User::class, function (Faker\Generator $faker) {
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'password' => $password ?: $password = bcrypt('secret'),
-        'verified' => $verificado = $faker->randomElement([User::USUARIO_VERIFICADO,User::USUARIO_NO_VERIFICADO]),
+        'remember_token' => str_random(10),
+        'verified' => $verificado = $faker->randomElement([User::USUARIO_VERIFICADO, User::USUARIO_NO_VERIFICADO]),
         'verification_token' => $verificado == User::USUARIO_VERIFICADO ? null : User::generarVerificationToken(),
         'admin' => $faker->randomElement([User::USUARIO_ADMINISTRADOR, User::USUARIO_REGULAR]),
-        'remember_token' => str_random(10)
     ];
 });
 
